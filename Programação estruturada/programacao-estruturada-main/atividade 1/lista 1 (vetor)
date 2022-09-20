@@ -1,0 +1,87 @@
+//1-Escrever um programa que declare um vetor de reais e leia as notas de 30 alunos
+#include <stdio.h>
+int main(){
+	double notas[30];
+	int i;
+	
+	for(i=0; i<30; i++){
+		printf("digite a nota:");
+		scanf("%lf", &notas[i]);
+		
+	}	
+	
+	for(i=0; i<30; i++){
+		printf("Nota:%.0lf\n", notas[i]);
+	
+	
+	
+	}
+	
+}
+
+/*2- Altere o algoritmo anterior considerando que não se conhece quantos alunos esta turma tem
+(menos que 50). O número de aluno será informado pelo usuário.*/
+#include <stdio.h>
+int main(){
+	int numeroAlunos;
+	
+	printf("digite a quantidade de alunos:");
+	scanf("%i", &numeroAlunos);	
+	
+	double notas[numeroAlunos];
+	int i;
+	
+	for(i=0; i<numeroAlunos; i++){
+		printf("digite a nota:");
+		scanf("%lf", &notas[i]);
+		
+	}	
+	
+	for(i=0; i<numeroAlunos; i++){
+		printf("Nota%i:%.0lf\t",i+1, notas[i]);
+	
+	
+	
+	}
+	
+}
+
+/*7- Desenvolva um algoritmo que cadastre os preços de até 100 diferentes CDs em uma loja. Após
+este cadastro, o algoritmo deverá possibilitar a execução de uma de duas funções para aumento
+dos preços cadastrados, sendo a primeira de 10% para todos os CDs, enquanto a segunda
+aumenta o percentual informado pelo vendedor para todos os CDs. Será o vendedor que
+escolherá o tipo de aumento desejado. Após os cálculos deverá ser apresentado o percentual de
+aumento e, para cada CD, o valor sem aumento e o valor com aumento*/
+
+#include <stdio.h>
+int main(){
+	double cd[5], cd10[5], cdx[5], porcentagem;
+	int i;
+	
+	for(i=0;i<5;i++){
+		printf("digite o valor do CD %i: ",i+1);
+		scanf("%lf", &cd[i]);
+	}
+	
+	for(i=0;i<5;i++){
+		cd10[i]= cd[i]+cd[i]*(0.1);
+	}
+	
+	printf("informe a porcentagem em cada cd: ");
+	scanf("%lf", &porcentagem);
+	
+	for(i=0;i<5;i++){
+		cdx[i]= cd[i]+cd[i] * (porcentagem/100);
+
+}
+	
+	for(i=0;i<5;i++){
+	printf("valores originais:%.1lf\n", cd[i]);
+	printf("Valor com 10%%: %.1lf\n", cd10[i]);
+	printf("Valor com %.0lf%% : %.1lf\n",porcentagem,cdx[i]);	
+}
+	
+	
+	
+
+}

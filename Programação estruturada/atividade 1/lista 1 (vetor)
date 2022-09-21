@@ -61,7 +61,14 @@ int main(){
     printf("Digite um numero: ");
     scanf("%i", &valor[i]);
     }
-	
+
+    for(i=0; i<numeros; i++){
+    printf("%i\n",valor[i]);
+    }
+
+
+}
+
 /*7- Desenvolva um algoritmo que cadastre os preços de até 100 diferentes CDs em uma loja. Após
 este cadastro, o algoritmo deverá possibilitar a execução de uma de duas funções para aumento
 dos preços cadastrados, sendo a primeira de 10% para todos os CDs, enquanto a segunda

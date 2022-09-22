@@ -1,3 +1,6 @@
+/* Elabore um programa que receba o salario de 16 funcionarios, em uma matriz 4x4. 
+Os nomes funcionarios devem estar em um vetor de 4 posições . imprima os nomes e os salarios */
+
 #include <stdio.h>
 int main(){
 	int i,j;

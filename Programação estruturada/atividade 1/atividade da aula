@@ -9,22 +9,26 @@ int main(){
 	
 	for(i=0; i<4; i++){
 		
-	printf("digite o nome do funcionario: ");
+	printf("Digite o nome do funcionario %i: ",i+1);
 	scanf("%s",&funcionarios[i]);
 	
 	}
 	
 	for (i=0; i<4; i++){
 	for (j=0; j<4; j++){
-	 printf("digite o salario: [%i], [%i]  ",i,j);
+	 printf("Digite o salario do funcionario %i no mes %i: ",i+1,j+1);
      scanf("%i", &matriz[i][j]);
 	
 	
 	}	
-		
-	}
+    }	
 
 
+for (i=0; i<4; i++){
+	for (j=0; j<4; j++){
+        printf("Salario do funcionario %i (%s):%i\n",i+1,funcionarios[i],matriz[i][j]);
 
 }
+}
 
+}

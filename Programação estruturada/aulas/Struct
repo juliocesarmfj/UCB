@@ -1,0 +1,41 @@
+/*crie um algoritmo que receba os dados de um livro usando um struct 
+nome,valor,editora,volume*/
+
+#include <stdio.h>
+
+
+struct livro{    //cirei um novo tipo de dado, chamado tipo de dado complexo
+	char nome[30], editora[30];
+	float valor;
+	int volume;
+		
+};
+
+int main(){
+	int NumeroLivros,i;
+	struct livro livro1[100];
+
+    printf("Digite quantos livros quer registrar: ");
+    scanf("%i", &NumeroLivros); 
+	
+	for(i=0; i<NumeroLivros; i++){
+
+	
+	printf ("digite o nome do livro %i: ",i+1);
+	scanf ("%s", &livro1[i].nome);
+	printf ("digite o nome da editora:\n ");
+	scanf ("%s", &livro1[i].editora);
+	printf ("digite o valor do livro %s: ",livro1[i].nome);
+	scanf ("%f", &livro1[i].valor);
+	printf ("digite o volume do livro: ");
+	scanf ("%i", &livro1[i].volume);
+	printf("-------------------------\n");
+	
+}
+for(i=0;i<NumeroLivros;i++){
+	printf("\nDados do livro %i\nNome:%s\neditora:%s\nvalor do livro: %.2f\nvolume: %i\n",i+1,livro1[i].nome,livro1[i].editora, livro1[i].valor, livro1[i].volume);
+	
+	
+}	
+	
+}

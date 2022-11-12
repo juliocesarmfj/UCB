@@ -1,0 +1,106 @@
+/*1- Elabore um algoritmo que receba o nome completo de um cliente e imprima a quantidade de
+caracteres digitados*/
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char nome[50];
+    int tamanho;
+
+    printf("Digite o nome: ");
+    fgets(nome,50,stdin);
+
+    tamanho= strlen(nome)-1;
+
+    printf("%spossui %i letras",nome,tamanho);
+}
+
+/*2- Elabora um algoritmo que valide o nome de um cor, ou seja, o usuário poderá digitar apenas
+branco, verde e amarelo.*/
+
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char cor[50];
+
+    printf("Escreva a cor desejada: ");
+    fgets(cor,50,stdin);
+
+    if(strstr(cor,"branco")||(strstr(cor,"verde"))||(strstr(cor,"amarelo"))){
+        printf("cor aceita");
+    }
+    else{
+        printf("cor invalida");
+    }
+}
+
+/*3- Elabore um algoritmo que receba os dados: nome completo, e-mail e endereço de um usuário e
+faça um backup de todos eles em novas variávies.*/
+
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char nome1[50],nome2[50],nome3[50];
+
+
+    printf("Digite o primeiro nome: ");
+    fgets(nome1,50,stdin);
+    printf("Digite o nome do meio: ");
+    fgets(nome2,50,stdin);
+    printf("Digite o ultimo nome: ");
+    fgets(nome3,50,stdin);
+
+    nome1[strcspn(nome1, "\n")] = 0;
+    nome2[strcspn(nome2, "\n")] = 0;
+
+
+
+    printf("O nome completo e: %s%s%s",nome1,nome2,nome3);  
+}
+
+
+/*4- Elabore um algoritmo que receba o primeiro nome, o(s) nome(s) do meio, e o ultimo nome do
+usuário. Concatene os dados e imprima o valor final.*/
+
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char nome1[50],nome2[50],nome3[50];
+
+
+    printf("Digite o primeiro nome: ");
+    fgets(nome1,50,stdin);
+    printf("Digite o nome do meio: ");
+    fgets(nome2,50,stdin);
+    printf("Digite o ultimo nome: ");
+    fgets(nome3,50,stdin);
+    
+    nome1[strcspn(nome1, "\n")] = 0;
+    nome2[strcspn(nome2,"\n")] = 0;
+    strcat(nome1,nome2);
+    strcat(nome1,nome3);
+
+    printf("%s",nome1);
+}
+
+/*5- O usuario informa seu nome, sobrenome e numero do cpf. A partir destes dados é composta sua
+senha de acesso, formada pelo nome, primeira letra do sobrenome e os 3 primeiros números do
+cpf. Elabore um algoritmo que gere e imprima a senha.*/
+
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char nome[50],sobrenome[50],cpf[15];
+
+    printf("Digite o nome: ");
+    fgets(nome,50,stdin);
+    printf("Digite o sobrenome: ");
+    fgets(sobrenome,50,stdin);
+    printf("Digite o cpf: ");
+    fgets(cpf,15,stdin);
+
+    nome[strcspn(nome, "\n")] = 0;
+    printf("Sua senha sera:%s%c%c%c%c",nome,sobrenome[0],cpf[0],cpf[1],cpf[2]);
+
+}

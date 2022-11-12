@@ -1,0 +1,2 @@
+    nome1[strcspn(nome1, "\n")] = 0;
+    nome2[strcspn(nome2, "\n")] = 0;
